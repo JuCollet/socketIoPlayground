@@ -4,7 +4,7 @@ html, body {
   background-color: #DEDEDE;
 }
 
-form > input {
+.chatInput {
   position: fixed;
   width: calc(100% - 110px);
   outline: none;
@@ -16,7 +16,7 @@ form > input {
   border: 0;
 }
 
-form > button {
+.chatButton {
   position: fixed;
   padding: 0;
   margin: 0;
@@ -28,4 +28,9 @@ form > button {
   background-color: #333333;
   color: white;
   cursor: pointer;
+}
+
+#messages {
+  padding: 10px 20px;
+  list-style: none;
 }

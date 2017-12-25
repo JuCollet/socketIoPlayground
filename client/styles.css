@@ -30,6 +30,11 @@ html, body {
   cursor: pointer;
 }
 
+.chatWindow {
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
 #messages {
   padding: 10px 20px;
   list-style: none;

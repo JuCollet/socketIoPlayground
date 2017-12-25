@@ -3,6 +3,7 @@
   var socket = io();
   var form = document.getElementById('form');
   var msgList = document.getElementById('messages');
+  var chatWindow = document.querySelector('.chatWindow');
 
   form.addEventListener('submit', function(e){
     var currentTime = {
@@ -22,6 +23,7 @@
     textnode = document.createTextNode(`${msg.currentTime.hours}:${msg.currentTime.minutes} - ${msg.message}`);
     node.appendChild(textnode);
     msgList.appendChild(node);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
   });
 
 }());

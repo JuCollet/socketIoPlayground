@@ -21,7 +21,7 @@ io.on('connection', function(socket){
     io.emit('notification', `${socket.nickname} a quitté le chat.`);
   });
   socket.on('chat message', function(msg){
-    io.emit('chat message', {...msg, nickname: socket.nickname });
+    io.emit('chat message', Object.assign(msg, {nickname: socket.nickname}));
   });
 });
 
